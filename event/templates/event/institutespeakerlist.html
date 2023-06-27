@@ -1,0 +1,100 @@
+{% extends 'base.html' %} {% load static %} {% block banner %}
+<section>
+    <div class="lgx-banner lgx-banner-music">
+        <div class="lgx-banner-style">
+            <div class="lgx-inner lgx-inner-fixed">
+                <div class="container">
+                    <div class="row">
+                        <center><b>
+                <h2>Speakers</h2>
+              </b></center>
+                    </div>
+                </div>
+            </div>
+            <!--//.ROW-->
+        </div>
+        <!-- //.CONTAINER -->
+    </div>
+    <!-- //.INNER -->
+    </div>
+    </div>
+</section>
+
+<!-- this is temporary for upcoming speakers -->
+<div class="container" style="padding: 100px 0;">
+    <h2 style="text-align: center;">coming soon !</h2>
+</div>
+{% endblock banner %} {% block content %}
+<div class="row">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="sponsors-area">
+                {% for i in institutespeaker_list %}
+                {% if i.id == 22 %}
+                <div class="single">
+                    <a class="" href="{% url 'event:speakerdetail' i.id %}"><img src="{{i.pic.url}}" style="border-radius: 50%; height: 25rem; width: 25rem; border: 2px solid black;" alt="events" /></a>
+                    <div class="speaker-info">
+                        <h5 class="font-weight-bold mt-4 mb-3">
+                            <p class="text-uppercase"><strong>{{i.name}}<br></strong></p>
+                            <p><strong>{{i.position}}</strong></p>
+                        </h5>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+
+            </div>
+        </div>
+        <!--//col-->
+    </div>
+</div>
+<div class="row">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="sponsors-area">
+                {% for i in institutespeaker_list %}
+                {% if i.id != 22 and i.id <= 9 %}
+                <div class="single">
+                    <a class="" href="{% url 'event:speakerdetail' i.id %}"><img src="{{i.pic.url}}" style="border-radius: 50%; height: 25rem; width: 25rem; border: 2px solid black;" alt="events" /></a>
+                    <div class="speaker-info">
+                        <h5 class="font-weight-bold mt-4 mb-3">
+                            <p class="text-uppercase"><strong>{{i.name}}<br></strong></p>
+                            <p><strong>{{i.position}}</strong></p>
+                        </h5>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+
+            </div>
+        </div>
+        <!--//col-->
+    </div>
+</div>
+<div class="row">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="sponsors-area">
+                {% for i in institutespeaker_list %}
+                {% if i.id != 22 and i.id > 9 %}
+                <div class="single">
+                    <a class="" href="{% url 'event:speakerdetail' i.id %}"><img src="{{i.pic.url}}" style="border-radius: 50%; height: 25rem; width: 25rem; border: 2px solid black;" alt="events" /></a>
+                    <div class="speaker-info">
+                        <h5 class="font-weight-bold mt-4 mb-3">
+                            <p class="text-uppercase"><strong>{{i.name}}<br></strong></p>
+                            <p><strong>{{i.position}}</strong></p>
+                        </h5>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+
+            </div>
+        </div>
+        <!--//col-->
+    </div>
+</div>
+{% endblock content %}
