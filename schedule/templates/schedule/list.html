@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block program %}
+<section style="background: grey">
+
+    <!--<div id="preoutline">-->
+    <!--    <div class="lgx-inner">-->
+    <!--        <br>-->
+    <!--        <div class="container">-->
+
+
+    <!--            <center><h2>Pre-RIC Schedule</h2></center>-->
+    <!--            <br>-->
+    <!--            <div class="row">-->
+    <!--                <div class="col-xs-12">-->
+    <!--                    <div class="lgx-tab lgx-tab2"> <!--lgx-tab2 lgx-tab-vertical-->-->
+    <!--                        <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">  <!--lgx-nav-nogap lgx-nav-colorful-->-->
+    <!--                             <li><a data-toggle="pill" href="#preday1"><h3>Day 1: 7th April 2023(Friday)</h3></a></li>-->
+    <!--                            <li><a data-toggle="pill" href="#preday2"><h3>Day 2: 8th April 2023(Saturday)</h3></a></li>-->
+    <!--                        </ul>-->
+
+    <!--                    </div>-->
+    <!--                        <br>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+        <!-- //.INNER -->
+    <!--</div>-->
+
+    <div class="tab-content">
+
+      <!--<div id="preday2" class="tab-pane fade">-->
+      <!--  <center>-->
+      <!--  <h3>Day 2: 8th April 2023(Saturday)</h3>-->
+
+      <!--  <h4>Reporting Time: 9:30 AM</h4>-->
+
+      <!--  {% for i in about_list %}-->
+
+      <!--      {% if i == "Schedule" %}-->
+
+      <!--          <div class="row">-->
+      <!--              <div class="lgx-about-content-area" style="background: transparent; padding-top: 3rem; padding-left: 6rem; padding-right: 6rem;">-->
+      <!--                  <div class="lgx-heading">-->
+      <!--                      <center>-->
+      <!--                          <img src="{% static 'home/assets/img/rr.png' %}" class="left" width="80%" height="3">-->
+      <!--                      </center>-->
+      <!--                  </div>-->
+      <!--                  <div>-->
+      <!--                      <p>-->
+      <!--                          {{i.content|safe}}-->
+      <!--                      </p>-->
+      <!--                  </div>-->
+      <!--              </div>-->
+      <!--              <br><br>-->
+      <!--          </div>-->
+      <!--      {% endif %}-->
+      <!--  {% endfor %}-->
+
+      <!--</center>-->
+      <!--</div>-->
+
+
+
+    <div id="outline">
+        <div class="lgx-inner">
+        <br>
+            <div class="container">
+
+                <center><h2>Conclave Starts</h2></center>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-tab lgx-tab2"> <!--lgx-tab2 lgx-tab-vertical-->
+                            <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">
+                                <!--<li><a href="#day0"><h3>14 May 2023 - 16 May 2023</h3></a></li>-->
+
+                                 <li><a data-toggle="pill" href="#day0"><h3>Day 0: 14 May 2023(Sunday)</h3></a></li>
+                                <li><a data-toggle="pill" href="#day1"><h3>Day 1: 15 May 2023(Monday)</h3></a></li>
+                                <li><a data-toggle="pill" href="#day2"><h3>Day 2: 16 May 2023(Tuesday)</h3></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="tab-content">
+      <div id="day0" class="tab-pane fade">
+        <center>
+        <h3>Day 0: 14 May 2023(Sunday)</h3>
+        {% for i in about_list %} {% if i.cat.name == "day0" %}
+
+                <div class="row">
+                    <div class="lgx-about-content-area" style="background: transparent; padding-top: 3rem; padding-left: 6rem; padding-right: 6rem;">
+                        <div class="lgx-heading">
+                            <center>
+
+                                <img src="{% static 'home/assets/img/rr.png' %}" class="left" width="80%" height="3">
+                            </center>
+                        </div>
+                        <div>
+                            <p>
+                                    {{i.content|safe}}
+                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+      </center>
+      </div>
+      <div id="day1" class="tab-pane fade">
+        <center>
+        <h3>Day 1: 15 May 2023(Monday)</h3>
+        {% for i in about_list %} {% if i.cat.name == "day1" %}
+
+
+                    <div class="" style="background: transparent; margin-left:-15%;">
+                        <div class="lgx-heading">
+                            <center>
+
+                                <img src="{% static 'home/assets/img/rr.png' %}" class="left" width="80%" height="3">
+                            </center>
+                        </div>
+                        <div>
+
+                                    {{i.content|safe}}
+
+                        </div>
+                    </div>
+                    <br><br>
+
+                {% endif %}
+                {% endfor %}
+
+      </center>
+      </div>
+      <div id="day2" class="tab-pane fade">
+        <center>
+        <h3>Day 2: 16 May 2023(Sunday)</h3>
+        {% for i in about_list %} {% if i.cat.name == "day2" %}
+
+                <div class="row">
+                    <div class="lgx-about-content-area" style="background: transparent; margin-left:-13%">
+                        <div class="lgx-heading">
+                            <center>
+
+                                <img src="{% static 'home/assets/img/rr.png' %}" class="left" width="80%" height="3">
+                            </center>
+                        </div>
+                        <div>
+                            <p>
+                                    {{i.content|safe}}
+                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+                {% endif %}
+                {% endfor %}
+      </center>
+      </div>
+    </div>
+    <br><br><br>
+  <!--  <div class="row">-->
+  <!--        <div class="col-xs-12">-->
+  <!--              <div class="lgx-heading lgx-heading-white">-->
+  <!--                <h1 class="heading">PROGRAMME OUTLINE</h1>-->
+  <!--                <img src="{% static 'home/assets/img/rr.png' %}" class="left" width="50%" height="3">-->
+  <!--                  <div class="lgx-tab lgx-tab2">-->
+  <!--                  <br>-->
+  <!--                  <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">-->
+  <!--                      <li class="active"><a data-toggle="pill" href="#home"><h3>Abstract submission starts</h3> <p><span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                      <li><a data-toggle="pill" href="#menu1"><h3>Abstract submission extended deadline</h3> <p><span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                      <li><a data-toggle="pill" href="#menu2"><h3>Notification of Acceptance</h3></span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                  </ul>-->
+  <!--                  </div>-->
+  <!--              </div>-->
+  <!--        </div>-->
+  <!--    </div>-->
+  <!--<div class="row">-->
+  <!--    <div class="col-xs-12">-->
+  <!--        <div class="lgx-heading lgx-heading-white">-->
+  <!--              <div class="lgx-tab lgx-tab2">-->
+  <!--                  <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">-->
+  <!--                      <li class="active"><a data-toggle="pill" href="#home"><h3>Abstract submission starts</h3> <p><span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                      <li><a data-toggle="pill" href="#menu1"><h3>Abstract submission extended deadline</h3> <p><span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                      <li><a data-toggle="pill" href="#menu2"><h3>Notification of Acceptance</h3></span>DD </span>Month, 20xx</p></a></li>-->
+  <!--                  </ul>-->
+  <!--              </div>-->
+  <!--        </div>-->
+  <!--    </div>-->
+  <!--</div>-->
+</section>
+{% endblock program %}
